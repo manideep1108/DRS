@@ -4,7 +4,7 @@ EXP:
 
 DATASET:
     NAME: vocaug
-    ROOT: /data/DB/
+    ROOT: /kaggle/input/voc2012-updated/VOC2012/
     LABELS: ./data/datasets/voc12/labels.txt
     N_CLASSES: 21
     IGNORE_LABEL: 255
