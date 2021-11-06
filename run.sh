@@ -38,6 +38,6 @@ CUDA_VISIBLE_DEVICES=0,1 python scripts/train_refine.py \
 
 # Pseudo segmentation label generation
 CUDA_VISIBLE_DEVICES=0 python scripts/pseudo_seg_label_gen.py \
-    --img_dir=/data/DB/VOC2012/ \
-    --checkpoint=checkpoints/Refine_DRS_learnable/best.pth
+    --img_dir=/kaggle/input/voc2012-updated/VOC2012/ \
+    --checkpoint=/kaggle/working/DRS/checkpoints/Refine_DRS_learnable/best.pth
     
