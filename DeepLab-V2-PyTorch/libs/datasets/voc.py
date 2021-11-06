@@ -120,7 +120,7 @@ if __name__ == "__main__":
     batch_size = 100
 
     dataset = VOCAug(
-        root="/media/kazuto1011/Extra/VOCdevkit",
+        root="/kaggle/input/voc2012-updated/VOC2012/",
         split="train_aug",
         ignore_label=255,
         mean_bgr=(104.008, 116.669, 122.675),
