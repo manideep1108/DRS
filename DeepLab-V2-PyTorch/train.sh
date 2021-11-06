@@ -1,7 +1,7 @@
 DATASET=voc12
-CONFIG=configs/voc12_2gpu.yaml
-LOG_DIR=Deeplabv2_pseudo_segmentation_labels_2gpu
-GT_DIR=refined_pseudo_segmentation_labels
+CONFIG=/kaggle/working/DRS/DeepLab-V2-PyTorch/configs/voc12.yaml
+LOG_DIR=/kaggle/working/DRS/DeepLab-V2-PyTorch/Deeplabv2_pseudo_segmentation_labels_2gpu
+GT_DIR=/kaggle/working/DRS/DeepLab-V2-PyTorch/refined_pseudo_segmentation_labels
 
 # Training DeepLab-V2 using pseudo segmentation labels
 CUDA_VISIBLE_DEVICES=0,1 python train.py --config_path ${CONFIG} --gt_path ${GT_DIR} --log_dir ${LOG_DIR}
