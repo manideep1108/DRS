@@ -19,7 +19,7 @@ from utils.decode import decode_segmap
 parser = argparse.ArgumentParser(description='DRS pytorch implementation')
 parser.add_argument("--input_size", type=int, default=320)
 parser.add_argument("--crop_size", type=int, default=320)
-parser.add_argument("--img_dir", type=str, default="/data/DB/VOC2012/")
+parser.add_argument("--img_dir", type=str, default="/kaggle/input/voc2012-updated/VOC2012/")
 parser.add_argument("--train_list", type=str, default='VOC2012_list/train_aug_cls.txt')
 parser.add_argument("--test_list", type=str, default='VOC2012_list/train_cls.txt')
 parser.add_argument("--batch_size", type=int, default=1)
