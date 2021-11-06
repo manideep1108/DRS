@@ -1,6 +1,6 @@
 # Training Classifier with the learnable-DRS
 CUDA_VISIBLE_DEVICES=0,1 python scripts/train_cls.py \
-    --img_dir=../input/voc2012-updated/VOC2012/ \
+    --img_dir=/kaggle/input/voc2012-updated/VOC2012/ \
     --lr=0.001 \
     --epoch=15 \
     --decay_points='5,10' \
@@ -16,13 +16,13 @@ CUDA_VISIBLE_DEVICES=0,1 python scripts/train_cls.py \
 
 # Generating localization maps for the refinement learning
 CUDA_VISIBLE_DEVICES=0 python scripts/localization_map_gen.py \
-    --img_dir=../input/voc2012-updated/VOC2012/ \
+    --img_dir=/kaggle/input/voc2012-updated/VOC2012/ \
     --checkpoint=/kaggle/working/DRS/checkpoints/DRS_learnable/best.pth
 
 
 # Refinement learning
 CUDA_VISIBLE_DEVICES=0,1 python scripts/train_refine.py \
-    --img_dir=../input/voc2012-updated/VOC2012/ \
+    --img_dir=/kaggle/input/voc2012-updated/VOC2012/ \
     --lr=0.0001 \
     --epoch=30 \
     --decay_points='10,20' \
